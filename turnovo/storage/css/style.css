@@ -1,0 +1,27 @@
+html *
+{
+   color: #000 !important;
+   font-family:Palatino Linotype !important;
+}
+body{background:#ffcc99;}
+a{color:black;}
+a:hover{text-decoration:none;color:black;}
+a:visited{text-decoration:none;color:black;}
+label{
+	display:block;
+	margin:auto;
+	width:75%;
+	font:25px Book Antiqua;
+}
+input{
+	display:block;
+	margin:auto;
+	width:75%;
+	font:25px Book Antiqua;
+}
+textarea{
+	display:block;
+	margin:auto;
+	width:75%;
+	font:25px Book Antiqua;
+}
