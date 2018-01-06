@@ -3,7 +3,6 @@ class IndexController extends Controller{
 	public $getProducts;
 	public function index()
 	{
-		$params = !empty($_GET['params']) ? $_GET['params'] : false;
 		if(!empty ($_GET['destroy'])){
 			$this->destroy();
 		}else if(!empty ($_GET['edit'])){
