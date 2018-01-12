@@ -3,16 +3,10 @@ class IndexController extends Controller{
 	public $getProducts;
 	public function index()
 	{
-		if(!empty ($_GET['destroy'])){
-			$this->destroy();
-		}else if(!empty ($_GET['edit'])){
-			$this->edit();			
-		}else{
-			$this->CreateModel("product");
-			$index = new Product();
-			$this->getProducts = $index->index();
-			$this->CreateView("index");
-		}
+		$this->CreateModel("product");
+		$index = new Product();
+		$this->getProducts = $index->index();
+		$this->CreateView("index");
 
 	}
 	public function create()
