@@ -16,10 +16,10 @@
 
 		<div class="col-xs-12">
 			<div class="col-xs-6">
-				<a class="btn btn-block btn-info" href='<?php echo "?edit=" . $getProduct["id"];?>'>Edit</a>
+				<a class="btn btn-block btn-info" href='<?php echo "edit.php?id=" . $getProduct["id"];?>'>Edit</a>
 			</div>
 			<div class="col-xs-6">
-				<a class="btn btn-block btn-danger" href='<?php echo "?destroy=" . $getProduct["id"];?>'>Destroy</a>
+				<a class="btn btn-block btn-danger" href='<?php echo "destroy.php?id=" . $getProduct["id"];?>'>Destroy</a>
 			</div>
 		</div>
 	</div>
