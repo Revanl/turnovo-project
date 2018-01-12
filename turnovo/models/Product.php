@@ -35,7 +35,7 @@ class Product extends Database{
 	{
 		$row = self::selectOne("SELECT * FROM products WHERE id=:id",
 			array(
-				':id' => self::test_input($_GET['edit'])
+				':id' => self::test_input($_GET['id'])
 			));	
 		return $row;
 	}
@@ -54,7 +54,7 @@ class Product extends Database{
 				':description' => self::test_input($_POST['description']),
 				':price' => self::test_input($_POST['price']),
 				':image' => self::validate_file($_FILES["image"]["name"]),
-				':id' => self::test_input($_GET['edit'])
+				':id' => self::test_input($_GET['id'])
 			));
 		}else{
 			$row = self::execute("UPDATE products SET 
@@ -66,7 +66,7 @@ class Product extends Database{
 				':name' => self::test_input($_POST['name']),
 				':description' => self::test_input($_POST['description']),
 				':price' => self::test_input($_POST['price']),
-				':id' => self::test_input($_GET['edit'])
+				':id' => self::test_input($_GET['id'])
 			));	
 		}
 	}
@@ -74,7 +74,7 @@ class Product extends Database{
 	{
 		$row = self::selectOne("SELECT image FROM products WHERE id=:id",
 		array(
-			':id' => self::test_input($_GET['destroy'])
+			':id' => self::test_input($_GET['id'])
 		));	
 		$filename = './storage/uploads/'.$row['image'];
 		if($row['image'] != "noimage.jpg"){
@@ -85,7 +85,7 @@ class Product extends Database{
 		}
 		$destroy = self::execute("DELETE FROM products WHERE id=:id",
 		array(
-			':id' => self::test_input($_GET['destroy'])
+			':id' => self::test_input($_GET['id'])
 		));
 	}
 	
